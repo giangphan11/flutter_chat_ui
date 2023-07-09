@@ -1,4 +1,4 @@
-name: flutter_chat_ui
+name: flyer_chat_text_message
 version: 3.10.1
 
 environment:
@@ -6,12 +6,9 @@ environment:
   flutter: ">=3.16.0"
 
 dependencies:
-  diffutil_dart: ^4.0.1
   flutter:
     sdk: flutter
   flutter_chat_core: ^3.10.1
-  flyer_chat_image_message: ^3.10.1
-  flyer_chat_text_message: ^3.10.1
   provider: ^6.1.1
 
 dev_dependencies:

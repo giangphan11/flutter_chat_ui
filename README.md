@@ -1,3 +1,93 @@
+## Create a new example or package
+
+### To create a new example:
+
+1. Go to examples folder
+
+```bash
+cd examples
+```
+
+2. Run the following command:
+
+```bash
+flutter create example_name --org flyer.chat
+```
+
+3. Go to the root folder
+
+```bash
+cd ..
+```
+
+4. Run melos bootstrap:
+
+```bash
+melos bs
+```
+
+5. Replace `analysis_options.yaml` content with the following:
+
+```bash
+include: ../../analysis_options.yaml
+
+```
+
+### To create a new package:
+
+1. Go to packages folder
+
+```bash
+cd packages
+```
+
+2. Run the following command:
+
+```bash
+flutter create package_name --template=package
+```
+
+3. Go to the root folder
+
+```bash
+cd ..
+```
+
+4. Run melos bootstrap:
+
+```bash
+melos bs
+```
+
+5. Replace `analysis_options.yaml` content with the following:
+
+```bash
+include: ../../analysis_options.yaml
+
+```
+
+6. Make sure to follow other packages structure. Minimum required files are:
+
+```
+.dart_tool/
+lib/
+  src/
+    code.dart
+  package_name.dart
+analysis_options.yaml
+CHANGELOG.md
+LICENSE
+melos_package_name.iml
+pubspec_overrides.yaml
+pubspec.lock
+pubspec.yaml
+README.md
+```
+
+Remove all other files if needed and update `pubspec.yaml` similar to other packages.
+
+Remember to run `melos bs` again after you finished all configs and changed `pubspec.yaml` file.
+
 ## Tests
 
 To run tests for a specific package:
@@ -51,3 +141,8 @@ melos analyze
 melos format
 melos fix
 ```
+
+## Dependencies that require Dart >=3.2.0 and Flutter >=3.16.0
+
+- cross_file (latest working for Dart 3.0.0 and Flutter 3.10.0 is 0.3.3+7)
+- mime (latest working for Dart 3.0.0 and Flutter 3.10.0 is 1.0.4)
